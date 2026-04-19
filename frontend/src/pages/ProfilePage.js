@@ -1,7 +1,6 @@
 import { useMemo, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { useTheme } from '../context/ThemeContext';
 import API from '../api/axios';
 import '../css/ProfilePage.css';
 
@@ -16,7 +15,6 @@ const cartoonAvatars = [
 
 const ProfilePage = () => {
   const { user, setUser, logout } = useAuth();
-  const { theme, toggleTheme } = useTheme();
   const navigate = useNavigate();
 
   const [name, setName] = useState(user?.name || '');

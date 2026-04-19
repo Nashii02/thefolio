@@ -1,9 +1,13 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useTheme } from '../context/ThemeContext';
 
 function Nav() {
   const location = useLocation();
   const { user } = useAuth();
+  const { theme, toggleTheme } = useTheme();
+
+  const themeButtonText = theme === 'dark' ? '☀️' : '🌙';
 
   return (
     <header className="site-header">
@@ -69,6 +73,11 @@ function Nav() {
               )}
             </ul>
           </nav>
+          <div className="theme-toggle-container">
+            <button className="theme-toggle-btn" onClick={toggleTheme}>
+              {themeButtonText}
+            </button>
+          </div>
         </div>
       </div>
     </header>

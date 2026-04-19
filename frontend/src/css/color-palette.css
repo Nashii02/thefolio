@@ -21,3 +21,21 @@
   --shadow: rgba(44, 62, 80, 0.08);
   --upload-dash: #b9c7d3;
 }
+
+/* Dark Mode Color Overrides */
+[data-theme="dark"] {
+  --navy: #1a2635;
+  --blue: #3498db;
+  --light-text: #ecf0f1;
+  --text: #ecf0f1;
+  --muted-text: #95a5a6;
+  --border: #34495e;
+  --soft-border: #2c3e50;
+  --surface: #2c3e50;
+  --surface-soft: #34495e;
+  --danger: #e74c3c;
+  --danger-dark: #c0392b;
+  --focus-ring: rgba(52, 152, 219, 0.3);
+  --shadow: rgba(26, 38, 53, 0.15);
+  --upload-dash: #546e7a;
+}

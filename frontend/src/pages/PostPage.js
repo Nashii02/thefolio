@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import API from '../api/axios';
 import { useAuth } from '../context/AuthContext';
 import '../css/PostPage.css';
@@ -15,11 +15,7 @@ const PostPage = () => {
   const [error, setError] = useState('');
   const [deletingCommentId, setDeletingCommentId] = useState('');
 
-  useEffect(() => {
-    fetchPostAndComments();
-  }, [id, navigate]);
-
-  const fetchPostAndComments = async () => {
+  const fetchPostAndComments = useCallback(async () => {
     try {
       const { data } = await API.get(`/posts/${id}`);
       setPost(data);
@@ -37,7 +33,11 @@ const PostPage = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [id, navigate]);
+
+  useEffect(() => {
+    fetchPostAndComments();
+  }, [fetchPostAndComments]);
 
   const handleAddComment = async (e) => {
     e.preventDefault();

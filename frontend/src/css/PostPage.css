@@ -74,7 +74,7 @@
   height: 48px;
   border-radius: 50%;
   background: var(--blue, #3498db);
-  color: white;
+  color: var(--light-text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,11 +114,16 @@
 }
 
 .comments-section h2 {
-  color: var(--navy, #2c3e50);
+  color: #2c3e50;
   margin-bottom: 25px;
   font-size: 1.5rem;
   border-bottom: 2px solid var(--border, #cfd8df);
   padding-bottom: 15px;
+}
+
+html[data-theme="dark"] .comments-section h2 {
+  color: #ecf0f1 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Comment Form */
@@ -207,6 +212,11 @@
   transition: all 0.2s ease;
 }
 
+[data-theme="dark"] .comment-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
 .comment-item:hover {
   border-color: var(--border, #cfd8df);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -249,8 +259,12 @@
 }
 
 .comment-header strong {
-  color: var(--navy, #2c3e50);
+  color: #2c3e50;
   font-size: 0.95rem;
+}
+
+[data-theme="dark"] .comment-header strong {
+  color: #ecf0f1 !important;
 }
 
 .comment-date {
@@ -260,11 +274,15 @@
 }
 
 .comment-body {
-  color: var(--text, #2c3e50);
+  color: #2c3e50;
   line-height: 1.6;
   margin: 10px 0;
   word-break: break-word;
   white-space: pre-wrap;
+}
+
+[data-theme="dark"] .comment-body {
+  color: #ecf0f1 !important;
 }
 
 .delete-comment-btn {

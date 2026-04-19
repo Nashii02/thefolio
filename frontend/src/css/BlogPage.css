@@ -46,6 +46,11 @@
   margin-bottom: 12px;
 }
 
+[data-theme="dark"] .create-post-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
 .create-post-header {
   display: flex;
   align-items: center;
@@ -57,7 +62,7 @@
   font-size: 1rem;
   font-weight: 700;
   margin: 0;
-  color: var(--navy);
+  color: var(--text);
 }
 
 .profile-pic-small {
@@ -73,7 +78,7 @@
   height: 40px;
   border-radius: 50%;
   background: var(--blue);
-  color: white;
+  color: var(--light-text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,7 +89,7 @@
   font-size: 1.1rem;
   font-weight: 700;
   margin: 0 0 12px;
-  color: var(--navy);
+  color: var(--text);
 }
 
 .create-post-box form {
@@ -174,7 +179,7 @@
   font-size: 1.4rem;
   font-weight: 700;
   margin: 0 0 12px;
-  color: var(--navy);
+  color: var(--text);
 }
 
 /* No Posts */
@@ -222,6 +227,11 @@
   cursor: pointer;
 }
 
+[data-theme="dark"] .post-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
 .post-item:hover {
   box-shadow: 0 2px 6px var(--shadow);
 }
@@ -256,7 +266,7 @@
   height: 32px;
   border-radius: 50%;
   background: var(--blue);
-  color: white;
+  color: var(--light-text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -269,7 +279,7 @@
   font-size: 1.1rem;
   font-weight: 700;
   margin: 0 0 4px;
-  color: var(--navy);
+  color: var(--text);
   line-height: 1.3;
 }
 
@@ -282,7 +292,7 @@
 .delete-btn {
   background: #dc3545;
   border: none;
-  color: white;
+  color: var(--light-text);
   font-size: 0.75rem;
   padding: 4px 8px;
   cursor: pointer;

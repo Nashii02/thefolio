@@ -260,7 +260,6 @@ a:hover {
 
 .header-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: var(--spacing-sm) 0;
     gap: 2rem;
@@ -276,6 +275,10 @@ a:hover {
 .main-nav {
     margin-right: 0;
     flex: 1;
+}
+
+.theme-toggle-container {
+    margin-left: auto;
 }
 
 .main-nav ul {
@@ -415,7 +418,7 @@ a:hover {
 .submit-button {
     display: inline-block;
     background-color: var(--navy);
-    color: var(--color-white);
+    color: var(--light-text);
     padding: 14px 32px;
     border-radius: 8px;
     font-family: var(--font-heading);
@@ -430,7 +433,7 @@ a:hover {
 .submit-button:hover {
     background-color: var(--blue);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    color: var(--color-white);
+    color: var(--light-text);
 }
 
 /* ===================================
@@ -544,7 +547,7 @@ a:hover {
    =================================== */
 .site-footer {
     background-color: #0f3460;
-    color: #E8E8E8;
+    color: var(--light-text);
     padding: var(--spacing-xl) 0 var(--spacing-md);
     margin-top: var(--spacing-xxl);
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -553,7 +556,7 @@ a:hover {
 /* Dark mode footer adjustments */
 [data-theme="dark"] .site-footer {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    color: #E8E8E8;
+    color: var(--light-text);
 }
 
 .footer-content {
@@ -823,7 +826,7 @@ cite {
 .form-group label {
     font-weight: 600;
     margin-bottom: var(--spacing-xs);
-    color: white;
+    color: var(--color-text-primary);
 }
 
 .form-group input,
@@ -1276,11 +1279,16 @@ cite {
 }
 
 [data-theme="dark"] .btn-primary {
-    box-shadow: 0 8px 20px rgba(15, 52, 96, 0.4);
+    background: var(--blue);
+    color: var(--light-text);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
 }
 
 [data-theme="dark"] .btn-primary:hover {
-    box-shadow: 0 12px 30px rgba(15, 52, 96, 0.5);
+    background: var(--light-text);
+    color: var(--blue);
+    box-shadow: 0 12px 30px rgba(52, 152, 219, 0.6);
+    transform: translateY(-3px);
 }
 
 [data-theme="light"] .btn-primary {
@@ -1306,6 +1314,19 @@ cite {
     border-color: white;
     transform: translateY(-2px);
     color: white;
+}
+
+[data-theme="dark"] .btn-secondary {
+    background: rgba(52, 152, 219, 0.2);
+    color: var(--light-text);
+    border: 2px solid var(--blue);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background: rgba(52, 152, 219, 0.35);
+    border-color: var(--light-text);
+    color: var(--light-text);
+    transform: translateY(-2px);
 }
 
 [data-theme="light"] .btn-secondary {
@@ -1719,7 +1740,7 @@ cite {
 }
 
 [data-theme="dark"] .quiz-results h3 {
-    color: #E8E8E8;
+    color: var(--light-text);
 }
 
 .final-score {
@@ -1741,13 +1762,13 @@ cite {
     }
     
     body {
-        color: #000;
-        background: #fff;
+        color: var(--color-text-primary);
+        background: var(--color-white);
     }
     
     a {
         text-decoration: underline;
-        color: #000;
+        color: var(--color-text-primary);
     }
 }
 
@@ -1782,10 +1803,7 @@ cite {
    =================================== */
 /* Container for the toggle button */
 .theme-toggle-container {
-    position: fixed;
-    top: 15px;
-    right: 20px;
-    z-index: 9999;
+    margin-left: auto;
 }
 
 /* The toggle button itself */
@@ -1793,16 +1811,17 @@ cite {
     background-color: var(--color-lime);
     color: var(--color-white);
     border: none;
-    padding: 10px 16px;
+    padding: 8px 10px;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     cursor: pointer;
     font-weight: 600;
     box-shadow: 0 4px 15px rgba(50, 205, 50, 0.3);
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0;
+    line-height: 1;
 }
 
 /* Button hover effect */
@@ -1811,10 +1830,6 @@ cite {
     box-shadow: 0 6px 25px rgba(50, 205, 50, 0.4);
     transform: translateY(-2px);
 }
-
-/* ===================================
-   Success Popup Modal
-   =================================== */
 .success-popup-overlay {
     display: none;
     position: fixed;
