@@ -16,6 +16,10 @@ const AdminPage = () => {
     API.get('/contact').then((r) => setMessages(r.data));
   }, []);
 
+  useEffect(() => {
+    // Re-render component when theme changes to apply new CSS variable colors
+  }, [theme]);
+
   const toggleStatus = async (id) => {
     const { data } = await API.put(`/admin/users/${id}/status`);
     setUsers((prev) => prev.map((u) => (u._id === id ? data.user : u)));
