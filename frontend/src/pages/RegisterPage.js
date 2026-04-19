@@ -1,4 +1,4 @@
-﻿import AuthPage from './AuthPage';
+import AuthPage from './AuthPage';
 
 const RegisterPage = () => {
     return <AuthPage initialMode="register" />;
