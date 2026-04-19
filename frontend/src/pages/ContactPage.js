@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import API from '../api/axios';
+import Footer from '../components/Footer';
 import '../App.css';
 
 const ContactPage = () => {
@@ -238,30 +239,7 @@ const ContactPage = () => {
       </div>
 
       {/* Footer */}
-      <footer className="site-footer">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-info">
-              <h3>Creative<span className="lime-text">Hub</span></h3>
-              <p>Email: rekin@example.com</p>
-              <p>Phone: (+63) 972 752 0359</p>
-              <p>Address: San Fernando, La Union, Philippines</p>
-            </div>
-            <div className="footer-links">
-              <h3>Quick Links</h3>
-              <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-                <li><Link to="/login">Login</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <p>&copy; 2026 CreativeHub. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 };

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../css/HomePage.css';
+import Footer from '../components/Footer';
 import baking from '../images/baking.webp'
 import manganmanhwa from '../images/manganmanhwa.jpg'
 import setup from '../images/setup.jpg'
@@ -74,30 +75,7 @@ const HomePage = () => {
       </section>
 
       {/* Footer Section */}
-      <footer className="site-footer">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-info">
-              <h3>Creative<span className="lime-text">Hub</span></h3>
-              <p>Email: rekin@example.com</p>
-              <p>Phone: (+63) 972 752 0359</p>
-              <p>Address: San Fernando, La Union, Philippines</p>
-            </div>
-            <div className="footer-links">
-              <h3>Quick Links</h3>
-              <ul>
-                <li><Link to="/home">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-                <li><Link to="/register">Register</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <p>&copy; 2026 CreativeHub. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 };
