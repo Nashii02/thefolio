@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import API from '../api/axios';
 import Footer from '../components/Footer';
 import '../App.css';
