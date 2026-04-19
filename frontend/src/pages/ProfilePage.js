@@ -1,7 +1,7 @@
 import { useMemo, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import API from '../api/axios';
+import API, { BACKEND_URL } from '../api/axios';
 import '../css/ProfilePage.css';
 
 const cartoonAvatars = [
@@ -44,7 +44,7 @@ const ProfilePage = () => {
   const picSrc = previewFromUpload
     ? previewFromUpload
     : user?.profilePic
-      ? `http://localhost:5000/uploads/${user.profilePic}`
+      ? `${BACKEND_URL}/uploads/${user.profilePic}`
       : selectedAvatar || user?.avatar || '/default-avatar.png';
 
   const handleProfile = async (e) => {

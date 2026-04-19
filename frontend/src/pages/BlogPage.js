@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import API from '../api/axios';
+import API, { BACKEND_URL } from '../api/axios';
 import { useAuth } from '../context/AuthContext';
 import '../css/BlogPage.css';
 
@@ -176,7 +176,7 @@ const BlogPage = () => {
                     <img 
                       src={
                         user.profilePic 
-                          ? `http://localhost:5000/uploads/${user.profilePic}`
+                          ? `${BACKEND_URL}/uploads/${user.profilePic}`
                           : user.avatar
                       } 
                       alt={user.name}
@@ -246,7 +246,7 @@ const BlogPage = () => {
                               <img 
                                 src={
                                   post.author?.profilePic 
-                                    ? `http://localhost:5000/uploads/${post.author.profilePic}`
+                                    ? `${BACKEND_URL}/uploads/${post.author.profilePic}`
                                     : post.author?.avatar
                                 }
                                 alt={post.author.name}
@@ -298,7 +298,7 @@ const BlogPage = () => {
                                       <img 
                                         src={
                                           comment.author?.profilePic 
-                                            ? `http://localhost:5000/uploads/${comment.author.profilePic}`
+                                            ? `${BACKEND_URL}/uploads/${comment.author.profilePic}`
                                             : comment.author?.avatar
                                         }
                                         alt={comment.author?.name}

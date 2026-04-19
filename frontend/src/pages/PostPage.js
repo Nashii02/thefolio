@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState, useCallback } from 'react';
-import API from '../api/axios';
+import API, { BACKEND_URL } from '../api/axios';
 import { useAuth } from '../context/AuthContext';
 import '../css/PostPage.css';
 
@@ -87,7 +87,7 @@ const PostPage = () => {
                   <img 
                     src={
                       post.author?.profilePic 
-                        ? `http://localhost:5000/uploads/${post.author.profilePic}`
+                        ? `${BACKEND_URL}/uploads/${post.author.profilePic}`
                         : post.author?.avatar
                     }
                     alt={post.author?.name}
@@ -102,7 +102,7 @@ const PostPage = () => {
               </div>
               {post.image && (
                 <img
-                  src={`http://localhost:5000/uploads/${post.image}`}
+                  src={`${BACKEND_URL}/uploads/${post.image}`}
                   alt='Post cover'
                   className='post-image'
                 />
@@ -147,7 +147,7 @@ const PostPage = () => {
                             <img 
                               src={
                                 comment.author?.profilePic 
-                                  ? `http://localhost:5000/uploads/${comment.author.profilePic}`
+                                  ? `${BACKEND_URL}/uploads/${comment.author.profilePic}`
                                   : comment.author?.avatar
                               }
                               alt={comment.author?.name}
