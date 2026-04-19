@@ -13,6 +13,9 @@ const contactRoutes = require('./routes/contact.routes');
 const app = express();
 connectDB(); // Connect to MongoDB
 // ── Middleware ─────────────────────────────────────────────────
+// Setup CORS BEFORE routes
+const corsOrigins = (process.env.CORS_ORIGIN || 'http://localhost:3000,http://localhost:3001,https://thefolio-hmuqfjpul-nashii02s-projects.vercel.app').split(',').map(url => url.trim());
+app.use(cors({ origin: corsOrigins, credentials: true }));
 // Parse incoming JSON request bodies
 app.use(express.json());
 // Parse form-encoded request bodies (needed for FormData with text fields)
@@ -25,8 +28,6 @@ app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
 app.use('/api/comments', commentRoutes);
 app.use('/api/admin', adminRoutes);app.use('/api/contact', contactRoutes);// ── Start Server ──────────────────────────────────────────────
-const corsOrigins = (process.env.CORS_ORIGIN || 'http://localhost:3000,http://localhost:3001,https://thefolio-hmuqfjpul-nashii02s-projects.vercel.app').split(',').map(url => url.trim());
-app.use(cors({ origin: corsOrigins, credentials: true }));
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
