@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useTheme } from '../context/ThemeContext';
 import API from '../api/axios';
 import '../css/AdminPage.css';
 
 const AdminPage = () => {
+  const { theme } = useTheme();
   const [users, setUsers] = useState([]);
   const [posts, setPosts] = useState([]);
   const [messages, setMessages] = useState([]);
