@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 
@@ -8,6 +9,10 @@ function Nav() {
   const { theme, toggleTheme } = useTheme();
 
   const themeButtonText = theme === 'dark' ? '☀️' : '🌙';
+
+  useEffect(() => {
+    // Re-render component when theme changes to apply new CSS variable colors
+  }, [theme]);
 
   return (
     <header className="site-header">
