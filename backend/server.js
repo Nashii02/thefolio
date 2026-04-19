@@ -21,6 +21,7 @@ const corsOrigins = [
   'https://thefolio-hmuqfjpul-nashii02s-projects.vercel.app',
   'https://thefolio-ilen7vcz8-nashii02s-projects.vercel.app',
   'https://thefolio-hpmku2szo-nashii02s-projects.vercel.app',
+  'https://thefolio-jgfm2u07u-nashii02s-projects.vercel.app',
   'https://thefolio-api.onrender.com', // Temporary - old endpoint
   'https://thefolio-nu3n.onrender.com', // New correct endpoint
   /\.vercel\.app$/ // Allow all Vercel preview URLs
