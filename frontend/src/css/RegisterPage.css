@@ -1,0 +1,438 @@
+@import './color-palette.css';
+
+/* Page Hero Section */
+.page-hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+  color: var(--light-text);
+  padding: 60px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-hero h2 {
+  font-size: 2.5rem;
+  margin: 0 0 16px;
+  font-weight: 700;
+}
+
+.page-hero p {
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* Register Section */
+.register-section {
+  padding: 40px 20px;
+  margin-bottom: 60px;
+}
+
+.register-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* Register Form Wrapper */
+.register-form-wrapper {
+  background: var(--surface);
+  border: 1px solid var(--soft-border);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.register-form-wrapper h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 24px;
+  color: var(--navy);
+}
+
+/* Error Message */
+.error-msg {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  border: 1px solid var(--danger);
+  background: #fdecea;
+  color: var(--danger-dark);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Form Styles */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.form-group input[type='text'],
+.form-group input[type='email'],
+.form-group input[type='password'] {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--surface);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-group input[type='text']::placeholder,
+.form-group input[type='email']::placeholder,
+.form-group input[type='password']::placeholder {
+  color: var(--muted-text);
+}
+
+.form-group input[type='text']:focus,
+.form-group input[type='email']:focus,
+.form-group input[type='password']:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+/* Radio Group */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio-label input[type='radio'] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--blue);
+}
+
+.radio-label span {
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+  gap: 12px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-label input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--blue);
+  margin-top: 2px;
+}
+
+.checkbox-label span {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 13px 16px;
+  background: var(--navy);
+  color: var(--light-text);
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease, box-shadow 0.15s ease;
+  box-shadow: 0 6px 14px var(--shadow);
+  margin-top: 8px;
+}
+
+.submit-button:hover {
+  background: var(--blue);
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}
+
+/* Register Benefits */
+.register-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.benefits-image {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.benefits-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.benefits-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: var(--light-text);
+}
+
+.benefits-content > p {
+  color: var(--text);
+  font-size: 0.95rem;
+  margin: 0 0 20px;
+  line-height: 1.6;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.benefits-list li {
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.benefits-list strong {
+  color: var(--text);
+}
+
+.benefits-note {
+  padding: 16px;
+  background: var(--surface-soft);
+  border-left: 4px solid var(--blue);
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+.benefits-note p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--navy);
+  line-height: 1.6;
+}
+
+/* Success Popup */
+.success-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.success-popup {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 40px 32px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.popup-icon {
+  font-size: 3rem;
+  color: #4caf50;
+  margin-bottom: 16px;
+}
+
+.success-popup h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 12px;
+}
+
+.success-popup p {
+  color: var(--text);
+  font-size: 0.95rem;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+/* Site Footer */
+.site-footer {
+  background: var(--navy);
+  color: var(--light-text);
+  padding: 40px 20px 20px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.footer-info h3,
+.footer-links h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.footer-info p {
+  margin: 6px 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a {
+  color: var(--light-text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: opacity 0.15s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.lime-text {
+  color: #cddc39;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-hero h2 {
+    font-size: 2rem;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+
+  .register-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .register-form-wrapper {
+    padding: 24px;
+  }
+
+  .register-form-wrapper h3 {
+    font-size: 1.3rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero {
+    padding: 40px 16px;
+    margin-bottom: 24px;
+  }
+
+  .page-hero h2 {
+    font-size: 1.7rem;
+  }
+
+  .page-hero p {
+    font-size: 0.95rem;
+  }
+
+  .register-section {
+    padding: 24px 16px;
+    margin-bottom: 32px;
+  }
+
+  .register-form-wrapper {
+    padding: 20px;
+  }
+
+  .register-form-wrapper h3 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+
+  .form-group {
+    gap: 6px;
+  }
+
+  .register-form {
+    gap: 16px;
+  }
+
+  .benefits-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .success-popup {
+    padding: 32px 24px;
+  }
+
+  .site-footer {
+    padding: 32px 16px 16px;
+  }
+
+  .footer-content {
+    gap: 16px;
+  }
+}

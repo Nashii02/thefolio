@@ -1,0 +1,23 @@
+/* Global Color Palette */
+:root {
+  --navy: #2c3e50;          /* main dark */
+  --blue: #3498db;          /* accent / hover */
+  --light-text: #ecf0f1;    /* text on dark backgrounds */
+
+  /* Supporting neutrals */
+  --text: #2c3e50;          /* main body text */
+  --muted-text: #7f8c8d;    /* placeholders / secondary text */
+  --border: #cfd8df;        /* input border */
+  --soft-border: #d6dde3;   /* card border */
+  --surface: #ffffff;       /* input / card inner background */
+  --surface-soft: #ecf0f1;  /* form container background */
+
+  /* States */
+  --danger: #e74c3c;        /* error / destructive */
+  --danger-dark: #c0392b;   /* error text / hover */
+  --focus-ring: rgba(52, 152, 219, 0.2);
+
+  /* Optional extras for depth */
+  --shadow: rgba(44, 62, 80, 0.08);
+  --upload-dash: #b9c7d3;
+}

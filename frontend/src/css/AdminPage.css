@@ -1,0 +1,209 @@
+@import './color-palette.css';
+
+.admin-page {
+  min-height: 100vh;
+  padding: 28px 20px;
+  background: linear-gradient(135deg, var(--surface-soft) 0%, var(--surface) 100%);
+  color: var(--text);
+}
+
+/* Header */
+.admin-page h2 {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+
+/* Tabs */
+.admin-tabs {
+  max-width: 1100px;
+  margin: 0 auto 16px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.admin-tabs button {
+  border: 1px solid var(--soft-border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+.admin-tabs button:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.admin-tabs button.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--light-text);
+}
+
+/* Table */
+.admin-table {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--soft-border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px var(--shadow);
+}
+
+/* Head */
+.admin-table thead {
+  background: var(--navy);
+}
+
+.admin-table thead th {
+  color: var(--light-text);
+  text-align: left;
+  padding: 13px 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* Body */
+.admin-table tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--soft-border);
+  font-size: 0.92rem;
+  color: var(--text);
+  vertical-align: middle;
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tbody tr:hover {
+  background: var(--surface-soft);
+}
+
+/* Action column */
+.action-col {
+  text-align: right !important;
+  width: 110px;
+  min-width: 110px;
+}
+
+/* Status badge */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 84px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  border: 1px solid transparent;
+}
+
+.status-badge.active {
+  background: rgba(52, 152, 219, 0.1);
+  color: var(--blue);
+  border-color: rgba(52, 152, 219, 0.3);
+}
+
+.status-badge.inactive {
+  background: rgba(231, 76, 60, 0.1);
+  color: var(--danger-dark);
+  border-color: rgba(231, 76, 60, 0.3);
+}
+
+.status-badge.published {
+  background: rgba(52, 152, 219, 0.12);
+  color: var(--blue);
+  border-color: rgba(52, 152, 219, 0.3);
+}
+
+.status-badge.removed {
+  background: rgba(127, 140, 141, 0.15);
+  color: var(--muted-text);
+  border-color: rgba(127, 140, 141, 0.35);
+}
+
+/* Buttons */
+.btn-danger,
+.btn-success {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease, box-shadow 0.15s ease;
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: var(--light-text);
+}
+
+.btn-danger:hover {
+  background: var(--danger-dark);
+}
+
+.btn-success {
+  background: var(--blue);
+  color: var(--light-text);
+}
+
+.btn-success:hover {
+  background: var(--navy);
+}
+
+.btn-danger:active,
+.btn-success:active {
+  transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .admin-page {
+    padding: 22px 14px;
+  }
+
+  .admin-page h2 {
+    font-size: 1.65rem;
+    margin-bottom: 14px;
+  }
+
+  .admin-tabs {
+    gap: 8px;
+  }
+
+  .admin-tabs button {
+    font-size: 0.86rem;
+    padding: 9px 12px;
+  }
+
+  .admin-table thead th,
+  .admin-table tbody td {
+    padding: 10px 10px;
+    font-size: 0.85rem;
+  }
+
+  .btn-danger,
+  .btn-success {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+}
