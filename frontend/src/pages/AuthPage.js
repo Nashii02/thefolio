@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useTheme } from '../context/ThemeContext';
 import API from '../api/axios';
 import '../css/LoginPage.css';
 
@@ -9,7 +10,12 @@ const AuthPage = ({ initialMode = 'login' }) => {
   const [error, setError] = useState('');
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
   const { login } = useAuth();
+  const { theme } = useTheme();
   const navigate = useNavigate();
+
+  // Re-render component when theme changes to apply new CSS variable colors
+  useEffect(() => {
+  }, [theme]);
 
   // Login state
   const [loginData, setLoginData] = useState({
