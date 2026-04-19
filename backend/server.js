@@ -14,7 +14,14 @@ const app = express();
 connectDB(); // Connect to MongoDB
 // ── Middleware ─────────────────────────────────────────────────
 // Setup CORS BEFORE routes - simple and reliable approach
-const corsOrigins = ['http://localhost:3000', 'http://localhost:3001', 'https://thefolio-hmuqfjpul-nashii02s-projects.vercel.app'];
+// Accept any Vercel deployment URL + localhost for development
+const corsOrigins = [
+  'http://localhost:3000', 
+  'http://localhost:3001', 
+  'https://thefolio-hmuqfjpul-nashii02s-projects.vercel.app',
+  'https://thefolio-ilen7vcz8-nashii02s-projects.vercel.app',
+  /\.vercel\.app$/ // Allow all Vercel preview URLs
+];
 
 app.use(cors({
   origin: corsOrigins,
