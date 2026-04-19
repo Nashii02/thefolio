@@ -7,7 +7,7 @@
   justify-content: center;
   min-height: 100vh;
   padding: 20px;
-  background: var(--background);
+  background: var(--surface-soft);
   transition: background 0.3s ease;
 }
 
