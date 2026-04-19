@@ -33,8 +33,6 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-// Handle preflight requests explicitly
-app.options('*', cors(corsOptions));
 // Parse incoming JSON request bodies
 app.use(express.json());
 // Parse form-encoded request bodies (needed for FormData with text fields)
