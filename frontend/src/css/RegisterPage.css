@@ -1,5 +1,36 @@
 @import './color-palette.css';
 
+/* Auth Container */
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--background);
+  transition: background 0.3s ease;
+}
+
+/* Auth Form Box */
+.auth-form-box {
+  background: var(--surface);
+  border: 1px solid var(--soft-border);
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: 0 10px 30px var(--shadow);
+  width: 100%;
+  max-width: 400px;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-form-box h2 {
+  color: var(--text);
+  margin: 0 0 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 /* Page Hero Section */
 .page-hero {
   background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
@@ -46,7 +77,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 0 24px;
-  color: var(--navy);
+  color: var(--text);
 }
 
 /* Error Message */
@@ -63,6 +94,12 @@
 
 /* Form Styles */
 .register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -161,11 +198,12 @@
   line-height: 1.4;
 }
 
-/* Submit Button */
-.submit-button {
+/* Submit Button & Auth Button */
+.submit-button,
+.auth-button {
   width: 100%;
   padding: 13px 16px;
-  background: var(--navy);
+  background: var(--blue);
   color: var(--light-text);
   border: none;
   border-radius: 10px;
@@ -177,12 +215,39 @@
   margin-top: 8px;
 }
 
-.submit-button:hover {
-  background: var(--blue);
+.submit-button:hover,
+.auth-button:hover {
+  background: var(--navy);
 }
 
-.submit-button:active {
+.submit-button:active,
+.auth-button:active {
   transform: scale(0.98);
+}
+
+/* Toggle Link */
+.auth-toggle {
+  text-align: center;
+  color: var(--text);
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.toggle-link {
+  background: none;
+  border: none;
+  color: var(--blue);
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s ease;
+  padding: 0;
+  font: inherit;
+}
+
+.toggle-link:hover {
+  color: var(--navy);
+  text-decoration: underline;
 }
 
 /* Register Benefits */
@@ -208,7 +273,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 0 12px;
-  color: var(--light-text);
+  color: var(--text);
 }
 
 .benefits-content > p {
@@ -248,7 +313,7 @@
 .benefits-note p {
   margin: 0;
   font-size: 0.9rem;
-  color: var(--navy);
+  color: var(--text);
   line-height: 1.6;
 }
 
@@ -284,7 +349,7 @@
 .success-popup h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--text);
   margin: 0 0 12px;
 }
 
@@ -378,6 +443,14 @@
     font-size: 1.3rem;
   }
 
+  .auth-form-box {
+    padding: 32px 24px;
+  }
+
+  .auth-form-box h2 {
+    font-size: 1.3rem;
+  }
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -412,11 +485,21 @@
     margin-bottom: 16px;
   }
 
+  .auth-form-box {
+    padding: 24px 20px;
+  }
+
+  .auth-form-box h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
   .form-group {
     gap: 6px;
   }
 
-  .register-form {
+  .register-form,
+  form {
     gap: 16px;
   }
 
